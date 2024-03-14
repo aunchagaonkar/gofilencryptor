@@ -5,7 +5,7 @@ import (
 	"crypto/aes"
 	"crypto/cipher"
 	"crypto/rand"
-	"crypto/sha1"
+	"crypto/sha256"
 	"encoding/hex"
 	"io"
 	"io/ioutil"
@@ -33,7 +33,7 @@ func Encrypt(source string, password []byte) {
 		panic(err.Error())
 	}
 
-	dk := pbkdf2.Key(key, nonce, 4096, 32, sha1.New)
+	dk := pbkdf2.Key(key, nonce, 4096, 32, sha256.New)
 
 	block, err := aes.NewCipher(dk)
 	if err != nil {
@@ -60,7 +60,11 @@ func Encrypt(source string, password []byte) {
 }
 
 func Decrypt(source string, password []byte) {
-
+	file, err := os.Open(source)
+	if err != nil {
+		panic(err.Error())
+	}
+	defer file.Close()
 	if _, err := os.Stat(source); os.IsNotExist(err) {
 		panic(err.Error())
 	}
@@ -77,7 +81,7 @@ func Decrypt(source string, password []byte) {
 
 	nonce, err := hex.DecodeString(str)
 
-	dk := pbkdf2.Key(key, nonce, 4096, 32, sha1.New)
+	dk := pbkdf2.Key(key, nonce, 4096, 32, sha256.New)
 
 	block, err := aes.NewCipher(dk)
 	if err != nil {
