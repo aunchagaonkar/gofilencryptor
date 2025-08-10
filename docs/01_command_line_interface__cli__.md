@@ -1,8 +1,6 @@
 # Chapter 1: Command-Line Interface (CLI)
 
-In the previous chapter, [Application Packaging (Docker)](01_application_packaging__docker__.md), we learned how to package `gofilencryptor` into a neat, portable Docker container. This means you have a ready-to-use tool, just like a pre-built coffee machine. But how do you *tell* that coffee machine to make coffee? You press buttons, right?
-
-Similarly, for `gofilencryptor`, you need a way to tell it what to do. You can't click buttons on it because it doesn't have a visual screen! This is where the **Command-Line Interface (CLI)** comes in.
+For `gofilencryptor`, you need a way to tell it what to do. You can't click buttons on it because it doesn't have a visual screen! This is where the **Command-Line Interface (CLI)** comes in.
 
 Our main goal in this chapter is to understand: **How do we "talk" to `gofilencryptor` directly using text commands to make it encrypt or decrypt files?**
 
