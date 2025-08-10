@@ -35,5 +35,17 @@ flowchart TD
 
 1. [Command-Line Interface (CLI)
 ](01_command_line_interface__cli__.md)
+2. [File System Interaction
+](02_file_system_interaction_.md)
+3. [Secure User Input Handling
+](03_secure_user_input_handling_.md)
+4. [File Encryption/Decryption Core
+](04_file_encryption_decryption_core_.md)
+5. [Cryptographic Key Derivation
+](05_cryptographic_key_derivation_.md)
+6. [Authenticated Encryption (AES-GCM)
+](06_authenticated_encryption__aes_gcm__.md)
+7. [Application Packaging (Docker)
+](07_application_packaging__docker__.md)
 
 ---
