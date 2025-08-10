@@ -1,4 +1,4 @@
-# Chapter 2: Command-Line Interface (CLI)
+# Chapter 1: Command-Line Interface (CLI)
 
 In the previous chapter, [Application Packaging (Docker)](01_application_packaging__docker__.md), we learned how to package `gofilencryptor` into a neat, portable Docker container. This means you have a ready-to-use tool, just like a pre-built coffee machine. But how do you *tell* that coffee machine to make coffee? You press buttons, right?
 
@@ -125,7 +125,7 @@ Commands:
 
 #### 2. Running with Docker
 
-As we saw in [Chapter 1](01_application_packaging__docker__.md), you can also run `gofilencryptor` inside a Docker container. The key difference is how you launch the program. You use `docker run`, and then pass the `gofilencryptor` commands and arguments to the container.
+We will see in [Chapter 7](01_application_packaging__docker__.md), you can also run `gofilencryptor` inside a Docker container. The key difference is how you launch the program. You use `docker run`, and then pass the `gofilencryptor` commands and arguments to the container.
 
 ```sh
 docker run -v /Users/yourname/Documents/Secrets:/app/files \
@@ -239,6 +239,6 @@ This structure allows `gofilencryptor` to be flexible and respond to different i
 
 In this chapter, you've learned that the **Command-Line Interface (CLI)** is how you interact with `gofilencryptor` using simple text commands. You now understand that these commands have "action words" (like `encrypt` or `decrypt`) and "details" (like the file path) that `gofilencryptor` cleverly "reads" using `os.Args` to perform its tasks.
 
-This CLI is powerful because it allows `gofilencryptor` to receive instructions on *what* to do and *which* file to do it to. But how does `gofilencryptor` actually *find* that file on your computer and then *read* or *write* to it? That's what we'll explore in the next chapter: [File System Interaction](03_file_system_interaction_.md).
+This CLI is powerful because it allows `gofilencryptor` to receive instructions on *what* to do and *which* file to do it to. But how does `gofilencryptor` actually *find* that file on your computer and then *read* or *write* to it? That's what we'll explore in the next chapter: [File System Interaction](02_file_system_interaction_.md).
 
 ---
